@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="en" charset="utf-8">
+
+    
+
+
+
+
+
+<head>
+  <meta name="generator" content="Zola v.0.13.0 - getzola.org" />
+
+  
+  
+  <title>Home &bull; tfcloud</title>
+  <meta property="og:title" content="Home &bull; tfcloud" />
+  
+  
+
+  <!-- Required meta categories -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- **** BEGINNING, favicons **** -->
+
+  <!-- generics -->
+
+  <!-- iOS -->
+
+  <!-- Android -->
+
+  <!-- Windows 8, IE 10 -->
+
+  <!-- Windows 8.1 and up, IE 11 -->
+
+  <!-- **** CONCLUSION, favicons **** -->
+
+  <!-- CSS/SCSS -->
+  <link rel="stylesheet" href="https://tfcloud.tf/css/index.css?h=52ebe1c3f0f0f10557fa5f427bfb8901d1216216c26e77e9cad7f5d2a08e01f7" />  <style>@-moz-document url-prefix() {.lazy:-moz-loading {visibility:hidden;}}.ieOnly {display: none;}@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {.ieOnly {display: block;}}</style>
+  
+</head>
+
+    
+    <body>
+        <!--
+  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
+  Read the documentation to get started: https://tailwindui.com/documentation
+--><!-- This example requires Tailwind CSS v1.4.0+ -->
+
+<script type="text/javascript">
+    
+    var displayedMenu = "";
+    var hamburgerShown = false;
+    let width = screen.width;
+    var isMobile = width < 1024;
+
+    function toggleMenu(button) {
+        if (displayedMenu === button.id.split("-")[0]) { 
+            button.className = button.className.replace(" text-blue-500 bg-stone-200 sm:bg-transparent", " text-gray-900");
+            hideMenu(button.id.split("-")[0]);
+            button.lastElementChild.className = button.lastElementChild.className.replace("rotate-0", "-rotate-90")
+            displayedMenu = "";
+        }
+        else { 
+            showMenu(button.id.split("-")[0]);
+            button.lastElementChild.className = button.lastElementChild.className.replace("-rotate-90", "rotate-0")
+            button.className = button.className.replace(" text-gray-900", " text-blue-500 bg-stone-200 sm:bg-transparent");
+            displayedMenu = button.id.split("-")[0]
+        }
+    }
+
+    function handleClick(button) {
+        if (button.id === "hamburger-btn" || button.id === "close-hamburger-btn") { toggleHamburger() }
+        if (button.id.indexOf("menu") !== -1 ) { 
+            toggleMenu(button) 
+        }
+    }
+
+    function toggleHamburger() {
+        if (hamburgerShown) { 
+            hideHamburger();
+            hamburgerShown = false;
+        }
+        else { 
+            showHamburger();
+            hamburgerShown = true;
+        }
+    }
+
+    function showMenu(menuName) {
+        var menuId = menuName + (isMobile ? '-mobile-menu' : '-menu');
+        var menuBtnId = menuName + (isMobile ? '-mobile-menu' : '-menu');
+        var menuElement = document.getElementById(menuId)
+        menuElement.className = menuElement.className.replace(" hidden" , "");
+        setTimeout(function() { menuElement.className = menuElement.className.replace("duration-200 ease-in opacity-0 -translate-y-1", "duration-150 ease-out opacity-1 -translate-y-0"); }, 10);
+    }
+
+    function hideMenu(menuName) {
+        var menuId = menuName + (isMobile ? '-mobile-menu' : '-menu');
+        var menuElement = document.getElementById(menuId)
+        menuElement.className = menuElement.className.replace("duration-150 ease-out opacity-1 -translate-y-0", "duration-200 ease-in opacity-0 -translate-y-1");
+        setTimeout(function() { menuElement.className = menuElement.className + " hidden" }, 300);
+    }
+
+    function showHamburger() {
+        document.getElementById('header-container').className = "overflow-hidden";
+        document.getElementById('hamburger').className = "fixed mt-16 z-20 top-0 inset-x-0 transition transform origin-top-right";
+        document.getElementById('hamburger-btn').className = "hidden lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out my-2";
+        document.getElementById('close-hamburger-btn').className = "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out my-2";
+    }
+
+    function hideHamburger() {
+        document.getElementById('header-container').className = "";
+        document.getElementById('hamburger').className = "hidden absolute z-20 top-0 inset-x-0 transition transform origin-top-right lg:hidden";
+        document.getElementById('hamburger-btn').className = "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out my-2";
+        document.getElementById('close-hamburger-btn').className = "hidden lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out my-2";
+        if (displayedMenu !== "") { hideMenu(displayedMenu); }
+    }
+
+    window.onload = function(){
+        let elements = document.getElementsByTagName("button");
+        let buttons = [...elements]
+        buttons.forEach((button) => {
+            button.addEventListener( 'click', function() { handleClick(button) });
+        })
+        document.getElementById("mobile-learn-btn").addEventListener( 'click', toggleMenu);
+    }
+
+</script>
+
+
+<!-- set variables used for header template -->
+
+
+
+
+
+    <header id="header-container">
+        
+        <div class="z-10 bg-white fixed w-screen max-w-full customize">
+            <div class="relative z-50 shadow">
+            <div class="mx-auto flex z-50 shadow justify-between items-center pl-6 pr-2 md:pr-0 lg:py-5  md:px-12 py-2 lg:px-20 lg:justify-start lg:space-x-20">
+                <div>
+                    <a href="/" class="flex">
+                        <img class="h-auto sm:w-15" src="https:&#x2F;&#x2F;tfcloud.tf&#x2F;images&#x2F;cloud_logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <div class="-mr-2 -my-2 lg:hidden">
+                    <button id="hamburger-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out my-2">
+                        <!-- Heroicon name: menu -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                <button id="close-hamburger-btn" type="button" class="hidden lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out my-2">
+                    <!-- Heroicon name: x -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex-1 lg:flex lg:items-center lg:justify-end lg:space-x-12">
+                    <nav class="flex space-x-10">    
+                    
+                    
+                        <a href="https:&#x2F;&#x2F;tfcloud.tf&#x2F;home&#x2F;" class="text-lg leading-6 text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150 mt-0">
+                            Home
+                        </a>
+                        <div class="relative">
+                        </div>
+                    
+                    
+                    </nav>
+                </div>
+            </div>
+        </div>
+    
+    
+        
+            <!--
+            Mobile menu, show/hide based on mobile menu state.
+        
+            Entering: "duration-200 ease-out"
+                From: "opacity-0 scale-95"
+                To: "opacity-100 scale-100"
+            Leaving: "duration-100 ease-in"
+                From: "opacity-100 scale-100"
+                To: "opacity-0 scale-95"
+            -->
+        <div id="hamburger" class="hidden fixed mt-16 z-20 top-0 inset-x-0 transition transform origin-top-right lg:hidden">
+            <div>
+                <div class="shadow-xs h-screen bg-white divide-y-2 divide-gray-50">
+                    <div class="pt-6 sm:px-12 md:px-16 lg:px-20 space-y-6 sm:space-y-8 sm:pb-8 max-h-screen overflow-y-auto">
+    
+                        <nav class="flex flex-col justify-around pb-12">
+                        
+                             
+                        
+                        
+                        </nav>                    
+                    </div>
+                
+            </div>
+            
+            </div>
+        </div>
+    
+    
+    </header>
+    
+
+
+
+
+        <div id="content" class="mx-auto overflow-hidden">
+            
+
+<main>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <div>
+        
+            <div class="container mx-auto"> 
+<!-- section 1 (header) -->
+<!-- row shortcode 
+Shortcode used in markdown for the creation of mobile compatible vertical rows
+Divides markdown into columns by splitting content using column identifier "|||"
+Creates equal width blocks in a flex row.
+
+Parameters: 
+- style: 
+    - lean: if style is lean, the row doesn't have outer margins
+- bgPath: if bgPath is passed, the row has a full width background
+-->
+
+
+<!-- This fixes link & img paths in local, prod, and wth prefix -->
+
+    
+    
+    
+        
+            
+            
+        
+            
+            
+            
+                
+            
+            
+        
+    
+
+
+
+
+
+
+<!-- aligns columns depending on col number-->
+ 
+    
+
+
+
+
+
+
+
+
+
+<!-- Padding -->
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+<!-- Margins -->
+
+
+
+
+    
+        
+    
+    
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+<!-- makes row full screen width and adds background img -->
+
+
+
+
+
+
+
+
+<!-- Cancels page margins so that rows can have separate margins -->
+
+
+
+        <div id="" class="relative justify-center flex overflow-hidden  " style="">
+            <div id="" class="relative flex flex-col md:flex md:flex-row flex-wrap max-w-fit overflow-hidden items-center py-8 md:py-4 lg:py-24 mx-12 sm:mx-20 md:mx-28 lg:mx-40 " style="min-width: -webkit-fill-available; min-width: -moz-available"> 
+        
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        <br>
+<br>
+<h1 id="threefold-p2p-cloud">ThreeFold <br>P2P Cloud</h1>
+<p>Scale your workloads limitlessly in a secure end-to-end environment.<br> The world's first carbon neutral peer-to-peer cloud.</p>
+
+                    
+                </div>
+            
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        
+<p><img src="https://tfcloud.tf/home/./img/home_header.png#mx-auto" alt="placeholder" /></p>
+
+                    
+                </div>
+            
+        
+    </div>
+</div><!-- section 2 -->
+<!-- row shortcode 
+Shortcode used in markdown for the creation of mobile compatible vertical rows
+Divides markdown into columns by splitting content using column identifier "|||"
+Creates equal width blocks in a flex row.
+
+Parameters: 
+- style: 
+    - lean: if style is lean, the row doesn't have outer margins
+- bgPath: if bgPath is passed, the row has a full width background
+-->
+
+
+<!-- This fixes link & img paths in local, prod, and wth prefix -->
+
+    
+    
+    
+        
+            
+            
+        
+            
+            
+            
+                
+                    
+                
+            
+            
+        
+            
+            
+            
+                
+                    
+                
+            
+            
+        
+    
+
+
+
+
+
+
+<!-- aligns columns depending on col number-->
+ 
+    
+
+
+
+
+
+
+
+
+
+<!-- Padding -->
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+<!-- Margins -->
+
+
+
+
+    
+        
+    
+    
+
+
+
+
+
+
+
+
+    
+        
+        
+    
+
+    
+
+    <!-- reverse col at mobile -->
+
+    
+
+
+     <!-- makes row semi-full screen width, strips margins -->
+    
+
+        <!-- makes row full screen width, strips margins -->
+    
+
+    
+    
+
+
+
+
+
+<!-- makes row full screen width and adds background img -->
+
+
+
+
+
+
+
+
+<!-- Cancels page margins so that rows can have separate margins -->
+
+
+
+        <div id="" class="relative justify-center flex overflow-hidden  " style="">
+            <div id="" class="relative flex flex-col md:flex md:flex-row flex-wrap max-w-fit overflow-hidden items-center py-0 mx-12 sm:mx-20 md:mx-28 lg:mx-40 text-center items-center mx-auto " style="min-width: -webkit-fill-available; min-width: -moz-available"> 
+        
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4 flex-1 ">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        <h3 id="get-started-with-your-evdc-beta-version-and-join-our-testing-community">Get started with your eVDC BETA version and join our testing community!</h3>
+<p><button><a href="https://library.threefold.me/info/threefold#/cloud/threefold__cloud_home?id=learn-what-is-threefold-p2p-cloud">Get Start</a></button>
+<button><a href="https://t.me/joinchat/BwOvOxxgK59GmRoZ2_sM0w">Join Community</a></button></p>
+
+                    
+                </div>
+            
+        
+    </div>
+</div><!-- section 3 -->
+<!-- row shortcode 
+Shortcode used in markdown for the creation of mobile compatible vertical rows
+Divides markdown into columns by splitting content using column identifier "|||"
+Creates equal width blocks in a flex row.
+
+Parameters: 
+- style: 
+    - lean: if style is lean, the row doesn't have outer margins
+- bgPath: if bgPath is passed, the row has a full width background
+-->
+
+
+<!-- This fixes link & img paths in local, prod, and wth prefix -->
+
+    
+    
+    
+        
+            
+            
+        
+            
+            
+            
+                
+            
+            
+        
+    
+
+
+
+
+
+
+<!-- aligns columns depending on col number-->
+ 
+    
+
+
+
+
+
+
+
+
+
+<!-- Padding -->
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+<!-- Margins -->
+
+
+
+
+    
+        
+    
+    
+
+
+
+
+
+
+
+
+    
+        
+        
+    
+
+    
+
+    <!-- reverse col at mobile -->
+
+    
+
+
+     <!-- makes row semi-full screen width, strips margins -->
+    
+
+        <!-- makes row full screen width, strips margins -->
+    
+
+    
+    
+
+
+
+
+
+<!-- makes row full screen width and adds background img -->
+
+
+
+
+
+
+
+
+<!-- Cancels page margins so that rows can have separate margins -->
+
+
+
+        <div id="" class="relative justify-center flex overflow-hidden  " style="">
+            <div id="" class="relative flex flex-col md:flex md:flex-row flex-wrap max-w-fit overflow-hidden items-center py-8 md:py-4 lg:py-24 mx-12 sm:mx-20 md:mx-28 lg:mx-40 text-center items-center mx-auto " style="min-width: -webkit-fill-available; min-width: -moz-available"> 
+        
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4 flex-1 ">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        <p><img src="https://tfcloud.tf/home/./img/carbon_neutral.png#medium#mx-auto" alt="placeholder" /></p>
+<h2 id="truly-better-for-our-planet">Truly Better for Our Planet</h2>
+<p>hreeFold’s peer-to-peer nature brings considerable energy efficiencies as compared to current solutions.</p>
+<p>The remaining carbon footprint of the grid will be converted into carbon credits and invested in planet positive projects to enable the world’s first carbon neutral grid.</p>
+
+                    
+                </div>
+            
+        
+    </div>
+</div><!-- section 4 -->
+<!-- row shortcode 
+Shortcode used in markdown for the creation of mobile compatible vertical rows
+Divides markdown into columns by splitting content using column identifier "|||"
+Creates equal width blocks in a flex row.
+
+Parameters: 
+- style: 
+    - lean: if style is lean, the row doesn't have outer margins
+- bgPath: if bgPath is passed, the row has a full width background
+-->
+
+
+<!-- This fixes link & img paths in local, prod, and wth prefix -->
+
+    
+    
+    
+        
+            
+            
+        
+            
+            
+            
+                
+            
+            
+        
+            
+            
+            
+                
+                    
+                
+            
+            
+        
+            
+            
+            
+                
+                    
+                    
+                
+            
+            
+        
+    
+
+
+
+
+
+
+<!-- aligns columns depending on col number-->
+ 
+    
+
+
+
+
+
+
+
+
+
+<!-- Padding -->
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+<!-- Margins -->
+
+
+
+
+    
+        
+    
+    
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+<!-- makes row full screen width and adds background img -->
+
+
+
+
+
+
+
+
+<!-- Cancels page margins so that rows can have separate margins -->
+
+
+
+        <div id="" class="relative justify-center flex overflow-hidden  " style="">
+            <div id="" class="relative flex flex-col md:flex md:flex-row flex-wrap max-w-fit overflow-hidden items-center py-8 md:py-4 lg:py-24 mx-12 sm:mx-20 md:mx-28 lg:mx-40 " style="min-width: -webkit-fill-available; min-width: -moz-available"> 
+        
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        <p><img src="https://tfcloud.tf/home/./img/card1.png#mx-auto" alt="placeholder" /></p>
+
+                    
+                </div>
+            
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        
+<h2 id="edge-virtual-data-center-evdc">Edge Virtual Data Center (eVDC)</h2>
+<p>Run your Kubernetes workloads anywhere in the world with dedicated CPU, SSD drives, and RAM – just for your web application or development environment. Compatible with industry standards and major frameworks. On the edge, out of the control of centralized parties – the next generation of the Data Center industry.</p>
+<p><button><a href="https://library.threefold.me/info/threefold#/cloud/threefold__evdc">Learn More</a></button>
+<button><a href="https://tfcloud.tf#pricing">Pricing</a></button></p>
+
+                    
+                </div>
+            
+        
+    </div>
+</div><!-- section 5 -->
+<!-- row shortcode 
+Shortcode used in markdown for the creation of mobile compatible vertical rows
+Divides markdown into columns by splitting content using column identifier "|||"
+Creates equal width blocks in a flex row.
+
+Parameters: 
+- style: 
+    - lean: if style is lean, the row doesn't have outer margins
+- bgPath: if bgPath is passed, the row has a full width background
+-->
+
+
+<!-- This fixes link & img paths in local, prod, and wth prefix -->
+
+    
+    
+    
+        
+            
+            
+        
+            
+            
+            
+                
+                    
+                
+            
+            
+        
+            
+            
+            
+                
+            
+            
+        
+    
+
+
+
+
+
+
+<!-- aligns columns depending on col number-->
+ 
+    
+
+
+
+
+
+
+
+
+
+<!-- Padding -->
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+<!-- Margins -->
+
+
+
+
+    
+        
+    
+    
+
+
+
+
+
+
+
+
+    
+
+    
+
+    <!-- reverse col at mobile -->
+
+    
+
+
+     <!-- makes row semi-full screen width, strips margins -->
+    
+
+        <!-- makes row full screen width, strips margins -->
+    
+
+    
+    
+
+
+
+
+
+<!-- makes row full screen width and adds background img -->
+
+
+
+
+
+
+
+
+<!-- Cancels page margins so that rows can have separate margins -->
+
+
+
+        <div id="" class="relative justify-center flex overflow-hidden  " style="">
+            <div id="" class="relative flex flex-col md:flex md:flex-row flex-wrap max-w-fit overflow-hidden items-center py-8 md:py-4 lg:py-24 mx-12 sm:mx-20 md:mx-28 lg:mx-40" style="min-width: -webkit-fill-available; min-width: -moz-available"> 
+        
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        <h2 id="quantum-safe-filesystem-qsfs">Quantum Safe <br>Filesystem(QSFS)</h2>
+<p>Store petabytes of data at an incredible price and with great reliability. Compatible with IPFS and Hypercore / Hyperdrive for peer-to-peer use-cases. Any storage platform can be put on top. This is the most reliable and globally-scalable filesystem ever invented.</p>
+<p><button><a href="https://library.threefold.me/info/threefold#/cloud/threefold__qss_filesystem">Learn More</a></button></p>
+
+                    
+                </div>
+            
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        
+<p><img src="https://tfcloud.tf/home/./img/card2.png#mx-auto" alt="placeholder" /></p>
+
+                    
+                </div>
+            
+        
+    </div>
+</div><!-- section 6 -->
+<!-- row shortcode 
+Shortcode used in markdown for the creation of mobile compatible vertical rows
+Divides markdown into columns by splitting content using column identifier "|||"
+Creates equal width blocks in a flex row.
+
+Parameters: 
+- style: 
+    - lean: if style is lean, the row doesn't have outer margins
+- bgPath: if bgPath is passed, the row has a full width background
+-->
+
+
+<!-- This fixes link & img paths in local, prod, and wth prefix -->
+
+    
+    
+    
+        
+            
+            
+        
+            
+            
+            
+                
+            
+            
+        
+            
+            
+            
+                
+                    
+                
+            
+            
+        
+    
+
+
+
+
+
+
+<!-- aligns columns depending on col number-->
+ 
+    
+
+
+
+
+
+
+
+
+
+<!-- Padding -->
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+<!-- Margins -->
+
+
+
+
+    
+        
+    
+    
+
+
+
+
+
+
+
+
+    
+        
+        
+    
+
+    
+
+    <!-- reverse col at mobile -->
+
+    
+
+
+     <!-- makes row semi-full screen width, strips margins -->
+    
+
+        <!-- makes row full screen width, strips margins -->
+    
+
+    
+    
+
+
+
+
+
+<!-- makes row full screen width and adds background img -->
+
+
+
+
+
+
+
+
+<!-- Cancels page margins so that rows can have separate margins -->
+
+
+
+        <div id="" class="relative justify-center flex overflow-hidden  " style="">
+            <div id="" class="relative flex flex-col md:flex md:flex-row flex-wrap max-w-fit overflow-hidden items-center py-8 md:py-4 lg:py-24 mx-12 sm:mx-20 md:mx-28 lg:mx-40 text-center items-center mx-auto " style="min-width: -webkit-fill-available; min-width: -moz-available"> 
+        
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4 flex-1 ">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        <p><img src="https://tfcloud.tf/home/./img/home_cta.png#mx-auto" alt="placeholder" /></p>
+<h2 id="truly-better-for-our-planet">Truly Better for Our Planet</h2>
+<p>A public peer-to-peer overlay network to connect everything on the planet. Connections are end-to-end encrypted and take the shortest path. Think of it as a Local Area Network (LAN) on a planetary scale, a &quot;global peer-to-peer VPN&quot; that lives on top of other networks and looks for any path to connectivity. Strongly authenticated at the edge.</p>
+<p><button><a href="https://library.threefold.me/info/threefold#/cloud/threefold__qss_filesystem">Learn More</a></button></p>
+
+                    
+                </div>
+            
+        
+    </div>
+</div><!-- section 7 -->
+<!-- row shortcode 
+Shortcode used in markdown for the creation of mobile compatible vertical rows
+Divides markdown into columns by splitting content using column identifier "|||"
+Creates equal width blocks in a flex row.
+
+Parameters: 
+- style: 
+    - lean: if style is lean, the row doesn't have outer margins
+- bgPath: if bgPath is passed, the row has a full width background
+-->
+
+
+<!-- This fixes link & img paths in local, prod, and wth prefix -->
+
+    
+    
+    
+        
+            
+            
+        
+            
+            
+            
+                
+            
+            
+        
+            
+            
+            
+                
+                    
+                
+            
+            
+        
+    
+
+
+
+
+
+
+<!-- aligns columns depending on col number-->
+ 
+    
+
+
+
+
+
+
+
+
+
+<!-- Padding -->
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+<!-- Margins -->
+
+
+
+
+    
+        
+    
+    
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+<!-- makes row full screen width and adds background img -->
+
+
+
+
+
+
+
+
+<!-- Cancels page margins so that rows can have separate margins -->
+
+
+
+        <div id="" class="relative justify-center flex overflow-hidden  " style="">
+            <div id="" class="relative flex flex-col md:flex md:flex-row flex-wrap max-w-fit overflow-hidden items-center py-8 md:py-4 lg:py-24 mx-12 sm:mx-20 md:mx-28 lg:mx-40 " style="min-width: -webkit-fill-available; min-width: -moz-available"> 
+        
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        <p><img src="https://tfcloud.tf/home/./img/marketplace.png#mx-auto" alt="placeholder" /></p>
+
+                    
+                </div>
+            
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        
+<h2 id="the-threefold-marketplace">The ThreeFold Marketplace</h2>
+<p>A marketplace of ready-made peer-to-peer applications for community builders seeking alternatives to centralized services. Deploy your own suite of online community tools in full privacy and with a high level of security. Runs on top of our VDC.</p>
+<p><button><a href="https://marketplace.threefold.io/">Discover the Marketplace</a></button></p>
+
+                    
+                </div>
+            
+        
+    </div>
+</div><!-- section 8 -->
+<!-- row shortcode 
+Shortcode used in markdown for the creation of mobile compatible vertical rows
+Divides markdown into columns by splitting content using column identifier "|||"
+Creates equal width blocks in a flex row.
+
+Parameters: 
+- style: 
+    - lean: if style is lean, the row doesn't have outer margins
+- bgPath: if bgPath is passed, the row has a full width background
+-->
+
+
+<!-- This fixes link & img paths in local, prod, and wth prefix -->
+
+    
+    
+    
+        
+            
+            
+        
+            
+            
+            
+                
+                    
+                
+            
+            
+        
+            
+            
+            
+                
+            
+            
+        
+    
+
+
+
+
+
+
+<!-- aligns columns depending on col number-->
+ 
+    
+
+
+
+
+
+
+
+
+
+<!-- Padding -->
+
+
+
+
+    
+        
+    
+
+
+
+
+
+
+
+<!-- Margins -->
+
+
+
+
+    
+        
+    
+    
+
+
+
+
+
+
+
+
+    
+
+    
+
+    <!-- reverse col at mobile -->
+
+    
+
+
+     <!-- makes row semi-full screen width, strips margins -->
+    
+
+        <!-- makes row full screen width, strips margins -->
+    
+
+    
+    
+
+
+
+
+
+<!-- makes row full screen width and adds background img -->
+
+
+
+
+
+
+
+
+<!-- Cancels page margins so that rows can have separate margins -->
+
+
+
+        <div id="" class="relative justify-center flex overflow-hidden  " style="">
+            <div id="" class="relative flex flex-col md:flex md:flex-row flex-wrap max-w-fit overflow-hidden items-center py-8 md:py-4 lg:py-24 mx-12 sm:mx-20 md:mx-28 lg:mx-40" style="min-width: -webkit-fill-available; min-width: -moz-available"> 
+        
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        <h2 id="infrastructure-as-code-iac">Infrastructure As Code(IAC)</h2>
+<p>Provision and manage cloud resources procedurally, with smart contracts for IT. Create reproducible and scalable deployments on the ThreeFold Grid.</p>
+<p><button><a href="https://library.threefold.me/info/threefold#/cloud/threefold__cloud_products?id=infrastructure-as-code-iac-for-experts">Learn More</a></button></p>
+
+                    
+                </div>
+            
+         
+
+            <!-- Hides empty columns if displayed vertically in small screen -->
+            
+                <div class="flex-1 mb-4 md:mb-12 lg:mb-0 lg:mx-2 xl:mx-4">
+                    <!-- handles mermaid markdown content display -->
+
+                    
+                        
+<p><img src="https://tfcloud.tf/home/./img/iac.png#mx-auto" alt="placeholder" /></p>
+
+                    
+                </div>
+            
+        
+    </div>
+</div><!-- section 9 -->
+<div class="lg:max-w-7xl mx-auto">
+  <div id="pricing" class="bg-white">
+    
+
+
+      <div
+        class="flex flex-col lg:flex-row my-10 mx-5">
+
+        <div class="border border-gray-200 rounded-lg shadow-sm divide-y p-8 my-6 mx-4 divide-gray-200"
+        >
+          <div class="text-center">
+            <h2 class="text-lg leading-6 font-bold text-gray-600">
+              SILVER
+            </h2>
+            
+            <p class="mt-8">
+              <span class="text-5xl leading-10 font-extrabold text-gray-700">$15</span>
+              <span class="text-2xl leading-6 font-medium text-gray-500"
+                >/mo</span
+              >
+            </p>
+            <button class="g-transparent hover:first:text-gray-500 font-semibold  py-2 px-4 border rounded-md"
+            > 
+             
+              Get Started
+          </button>
+        </div>
+          <div class="">
+            <h3
+              class="text-xs text-center leading-4 font-medium text-gray-700 tracking-wide uppercase"
+            >
+            WHAT'S INCLUDED?
+            </h3>
+            <ul class="mt-6 pl-0 mx-2">
+              <li class="flex space-x-3">
+                <!-- Heroicon name: check -->
+                <svg
+                  class="flex-shrink-0 h-5 w-5 text-green-600"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="text-sm leading-5 text-gray-600">A Kubernetes Controller and 1 Worker Node</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">4 GB Memory</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">100 GB Storage</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">A Network Gateway</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="border border-gray-200 rounded-lg shadow-sm divide-y p-8 mx-4 divide-gray-200"
+        >
+          <div class="text-center">
+            <h2 class="text-lg leading-6 font-bold text-gray-600">
+              SILVER
+            </h2>
+            
+            <p class="mt-8">
+              <span class="text-5xl leading-10 font-extrabold text-gray-700">$15</span>
+              <span class="text-2xl leading-6 font-medium text-gray-500"
+                >/mo</span
+              >
+            </p>
+            <button class="g-transparent hover:first:text-gray-500 font-semibold  py-2 px-4 border rounded-md"
+            > 
+             
+              Get Started
+          </button>
+        </div>
+          <div class="">
+            <h3
+              class="text-xs text-center leading-4 font-medium text-gray-700 tracking-wide uppercase"
+            >
+            WHAT'S INCLUDED?
+            </h3>
+            <ul class="mt-6 pl-0 mx-2">
+              <li class="flex space-x-3">
+                <!-- Heroicon name: check -->
+                <svg
+                  class="flex-shrink-0 h-5 w-5 text-green-600"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="text-sm leading-5 text-gray-600">A Kubernetes Controller and 1 Worker Node</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">4 GB Memory</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">100 GB Storage</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">A Network Gateway</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="border border-gray-200 rounded-lg shadow-sm divide-y p-8 mx-4 divide-gray-200"
+        >
+          <div class="text-center">
+            <h2 class="text-lg leading-6 font-bold text-gray-600">
+              SILVER
+            </h2>
+            
+            <p class="mt-8">
+              <span class="text-5xl leading-10 font-extrabold text-gray-700">$15</span>
+              <span class="text-2xl leading-6 font-medium text-gray-500"
+                >/mo</span
+              >
+            </p>
+            <button class="g-transparent hover:first:text-gray-500 font-semibold  py-2 px-4 border rounded-md"
+            > 
+             
+              Get Started
+          </button>
+        </div>
+          <div class="">
+            <h3
+              class="text-xs text-center leading-4 font-medium text-gray-700 tracking-wide uppercase"
+            >
+            WHAT'S INCLUDED?
+            </h3>
+            <ul class="mt-6 pl-0 mx-2">
+              <li class="flex space-x-3">
+                <!-- Heroicon name: check -->
+                <svg
+                  class="flex-shrink-0 h-5 w-5 text-green-600"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="text-sm leading-5 text-gray-600">A Kubernetes Controller and 1 Worker Node</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">4 GB Memory</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">100 GB Storage</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">A Network Gateway</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <div class="border border-gray-200 rounded-lg shadow-sm divide-y p-8 mx-4 divide-gray-200"
+        >
+          <div class="text-center">
+            <h2 class="text-lg leading-6 font-bold text-gray-600">
+              SILVER
+            </h2>
+            
+            <p class="mt-8">
+              <span class="text-5xl leading-10 font-extrabold text-gray-700">$15</span>
+              <span class="text-2xl leading-6 font-medium text-gray-500"
+                >/mo</span
+              >
+            </p>
+            <button class="g-transparent hover:first:text-gray-500 font-semibold  py-2 px-4 border rounded-md"
+            > 
+             
+              Get Started
+          </button>
+        </div>
+          <div class="">
+            <h3
+              class="text-xs text-center leading-4 font-medium text-gray-700 tracking-wide uppercase"
+            >
+            WHAT'S INCLUDED?
+            </h3>
+            <ul class="mt-6 pl-0 mx-2">
+              <li class="flex space-x-3">
+                <!-- Heroicon name: check -->
+                <svg
+                  class="flex-shrink-0 h-5 w-5 text-green-600"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="text-sm leading-5 text-gray-600">A Kubernetes Controller and 1 Worker Node</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">4 GB Memory</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">100 GB Storage</span>
+              </li>
+              <li class="flex space-x-3">
+                <svg
+                class="flex-shrink-0 h-5 w-5 text-green-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+                <span class="text-sm leading-5 text-gray-600">A Network Gateway</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+
+       
+
+     
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+        
+    </div>
+
+ </main>     
+        </div>
+        <!--
+  Tailwind UI components require Tailwind CSS v1.8 and the @tailwindcss/ui plugin.
+  Read the documentation to get started: https://tailwindui.com/documentation
+-->
+
+
+
+<footer class="bottom-0">
+    
+        
+        <div class="customize">
+            
+            <p class="text-center">&#169; TFCloud&trade; All Rights Reserved 2023</p>
+        </div>
+    
+</footer>
+    </body>
+</html>
