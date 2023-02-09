@@ -95,7 +95,7 @@ img[src*="#fig"] {
     @apply font-medium;
   }
   h2 {
-    @apply text-3xl lg:text-6xl font-bold leading-4 my-4;
+    @apply text-3xl lg:text-6xl font-bold leading-7 my-4;
     font-family: 'Ubuntu', sans-serif;
     
     
