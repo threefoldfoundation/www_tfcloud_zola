@@ -9,10 +9,11 @@ weight: 1
 <div class="container mx-auto"> 
 <!-- section 1 (header) -->
 
-{% row(margin="narrow" padding="both") %}
+<br>
 
-<br>
-<br>
+{% row(style="reverse" margin="narrow" padding="both") %}
+
+
 
 # ThreeFold <br>P2P Cloud
 
@@ -25,10 +26,13 @@ Scale your workloads limitlessly in a secure end-to-end environment.<br> The wor
 
 {% end %}
 
+<br>
+
+<br>
 
 <!-- section 2 -->
 
-{% row(style="center" margin="narrow" padding="none") %}
+{% row(style="center" margin="narrow" padding="both") %}
 
 ### Get started with your eVDC BETA version and join our testing community!
 
@@ -57,9 +61,7 @@ The remaining carbon footprint of the grid will be converted into carbon credits
 
 {% row(margin="narrow" padding="both") %}
 
-![placeholder](./img/card1.png#mx-auto)
-
-
+![placeholder](./img/card1.png#medium#mx-auto)
 
 |||
 
@@ -75,7 +77,7 @@ Run your Kubernetes workloads anywhere in the world with dedicated CPU, SSD driv
 
 <!-- section 5 -->
 
-{% row(style="reserve" margin="narrow" padding="both") %}
+{% row(style="reverse" margin="narrow" padding="both") %}
 
 
 ## Quantum Safe <br>Filesystem(QSFS)
@@ -88,7 +90,7 @@ Store petabytes of data at an incredible price and with great reliability. Compa
 
 |||
 
-![placeholder](./img/card2.png#mx-auto)
+![placeholder](./img/card2.png#medium#mx-auto)
 
 {% end %}
 
@@ -97,7 +99,7 @@ Store petabytes of data at an incredible price and with great reliability. Compa
 
 {% row(style="center" margin="narrow" padding="both") %}
 
-![placeholder](./img/home_cta.png#mx-auto)
+![placeholder](./img/home_cta.png#medium#mx-auto)
 
 ## Truly Better for Our Planet
 
@@ -113,7 +115,7 @@ A public peer-to-peer overlay network to connect everything on the planet. Conne
 
 {% row(margin="narrow" padding="both") %}
 
-![placeholder](./img/marketplace.png#mx-auto)
+![placeholder](./img/marketplace.png#medium#mx-auto)
 
 
 
@@ -131,7 +133,7 @@ A marketplace of ready-made peer-to-peer applications for community builders see
 
 <!-- section 8 -->
 
-{% row(style="reserve" margin="narrow" padding="both") %}
+{% row(style="reverse" margin="narrow" padding="both") %}
 
 
 ## Infrastructure As Code(IAC)
@@ -144,7 +146,7 @@ Provision and manage cloud resources procedurally, with smart contracts for IT. 
 
 |||
 
-![placeholder](./img/iac.png#mx-auto)
+![placeholder](./img/iac.png#medium#mx-auto)
 
 {% end %}
 
