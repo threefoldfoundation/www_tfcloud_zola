@@ -43,7 +43,7 @@ img[src*="#md"] {
 }
 
 img[src*="#medium"] {
-    width: 450px;
+    width: 400px;
 }
 
 img[src*="#logo"] {
@@ -86,7 +86,7 @@ img[src*="#fig"] {
 
 @layer components {
   h1 {
-    @apply text-4xl lg:text-5xl xl:text-7xl font-bold leading-4 my-4;
+    @apply text-4xl lg:text-5xl xl:text-7xl text-gray-700 font-bold leading-4 my-4;
     font-family: 'Ubuntu', sans-serif;
     line-height: 0.9;
     
@@ -95,7 +95,7 @@ img[src*="#fig"] {
     @apply font-medium;
   }
   h2 {
-    @apply text-4xl lg:text-6xl font-bold my-4;
+    @apply text-4xl lg:text-5xl text-gray-700 font-bold my-4;
     font-family: 'Ubuntu', sans-serif;
     line-height: 1em;
     

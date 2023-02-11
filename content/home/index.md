@@ -17,7 +17,7 @@ weight: 1
 
 # ThreeFold <br>P2P Cloud
 
-Scale your workloads limitlessly in a secure end-to-end environment.<br> The world's first carbon neutral peer-to-peer cloud.
+Scale your workloads limitlessly in a secure end-to-end environment. The world's first carbon neutral peer-to-peer cloud.
 
 |||
 
@@ -50,7 +50,7 @@ Scale your workloads limitlessly in a secure end-to-end environment.<br> The wor
 
 ## Truly Better for Our Planet
 
-hreeFold’s peer-to-peer nature brings considerable energy efficiencies as compared to current solutions.
+ThreeFold’s peer-to-peer nature brings considerable energy efficiencies as compared to current solutions.
 
 The remaining carbon footprint of the grid will be converted into carbon credits and invested in planet positive projects to enable the world’s first carbon neutral grid.
 
@@ -101,7 +101,7 @@ Store petabytes of data at an incredible price and with great reliability. Compa
 
 ![placeholder](./img/home_cta.png#medium#mx-auto)
 
-## Truly Better for Our Planet
+## Planetary Network
 
 A public peer-to-peer overlay network to connect everything on the planet. Connections are end-to-end encrypted and take the shortest path. Think of it as a Local Area Network (LAN) on a planetary scale, a "global peer-to-peer VPN" that lives on top of other networks and looks for any path to connectivity. Strongly authenticated at the edge.
 
