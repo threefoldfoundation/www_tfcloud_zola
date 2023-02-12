@@ -36,8 +36,8 @@ Scale your workloads limitlessly in a secure end-to-end environment. The world's
 
 ### Get started with your eVDC BETA version and join our testing community!
 
-<button>[Get Start](https://library.threefold.me/info/threefold#/cloud/threefold__cloud_home?id=learn-what-is-threefold-p2p-cloud)</button>
-<button>[Join Community](https://t.me/joinchat/BwOvOxxgK59GmRoZ2_sM0w)</button>
+<button onclick="window.open('https://library.threefold.me/info/threefold#/cloud/threefold__cloud_home?id=learn-what-is-threefold-p2p-cloud', '_blank')">Get Started</button>
+<button onclick="window.open('https://t.me/joinchat/BwOvOxxgK59GmRoZ2_sM0w', '_blank')">Join Community</button>
 
 {% end %}
 
@@ -69,7 +69,7 @@ The remaining carbon footprint of the grid will be converted into carbon credits
 
 Run your Kubernetes workloads anywhere in the world with dedicated CPU, SSD drives, and RAM – just for your web application or development environment. Compatible with industry standards and major frameworks. On the edge, out of the control of centralized parties – the next generation of the Data Center industry.
 
-<button>[Learn More](https://library.threefold.me/info/threefold#/cloud/threefold__evdc)</button>
+<button onclick="window.open('https://library.threefold.me/info/threefold#/cloud/threefold__evdc', '_blank')">Learn More</button>
 <button>[Pricing](#pricing)</button>
 
 {% end %}
@@ -85,7 +85,7 @@ Run your Kubernetes workloads anywhere in the world with dedicated CPU, SSD driv
 Store petabytes of data at an incredible price and with great reliability. Compatible with IPFS and Hypercore / Hyperdrive for peer-to-peer use-cases. Any storage platform can be put on top. This is the most reliable and globally-scalable filesystem ever invented.
 
 
-<button>[Learn More](https://library.threefold.me/info/threefold#/cloud/threefold__qss_filesystem)</button>
+<button onclick="window.open('https://library.threefold.me/info/threefold#/cloud/threefold__qss_filesystem', '_blank')">Learn More</button>
 
 
 |||
@@ -105,7 +105,7 @@ Store petabytes of data at an incredible price and with great reliability. Compa
 
 A public peer-to-peer overlay network to connect everything on the planet. Connections are end-to-end encrypted and take the shortest path. Think of it as a Local Area Network (LAN) on a planetary scale, a "global peer-to-peer VPN" that lives on top of other networks and looks for any path to connectivity. Strongly authenticated at the edge.
 
-<button>[Learn More](https://library.threefold.me/info/threefold#/cloud/threefold__qss_filesystem)</button>
+<button onclick="window.open('https://library.threefold.me/info/threefold#/cloud/threefold__qss_filesystem', '_blank')">Learn More</button>
 
 
 {% end %}
@@ -125,7 +125,7 @@ A public peer-to-peer overlay network to connect everything on the planet. Conne
 
 A marketplace of ready-made peer-to-peer applications for community builders seeking alternatives to centralized services. Deploy your own suite of online community tools in full privacy and with a high level of security. Runs on top of our VDC.
 
-<button>[Discover the Marketplace](https://marketplace.threefold.io/)</button>
+<button onclick="window.open('https://marketplace.threefold.io/', '_blank')">Discover the Marketplace</button>
 
 
 {% end %}
@@ -141,7 +141,7 @@ A marketplace of ready-made peer-to-peer applications for community builders see
 Provision and manage cloud resources procedurally, with smart contracts for IT. Create reproducible and scalable deployments on the ThreeFold Grid.
 
 
-<button>[Learn More](https://library.threefold.me/info/threefold#/cloud/threefold__cloud_products?id=infrastructure-as-code-iac-for-experts)</button>
+<button onclick="window.open('https://library.threefold.me/info/threefold#/cloud/threefold__cloud_products?id=infrastructure-as-code-iac-for-experts', '_blank')">Learn More</button>
 
 
 |||

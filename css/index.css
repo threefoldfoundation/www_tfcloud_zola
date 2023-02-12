@@ -146,8 +146,13 @@ img[src*="#fig"] {
 }
 
 button:hover  {
-  color: #984210;
+background-color: #2c5282;
+color: #fff;
 }
+
+a:hover  {
+  color: #fff !important;
+  }
 
 button  {
 font-weight: 500;
@@ -201,11 +206,13 @@ header .customize div {
     font-weight: 700 !important;
 }
 
+
+
 button {
-  background: transparent;
-  color: black;
-  border-radius: 10px;
-  border: 2px solid black;
+  background: #2a4365;
+  color: white;
+  border-radius: 20px;
+  border: 1px solid black;
   box-shadow: none;
   font-size: 20px;
 }
