@@ -1,0 +1,21 @@
+name: cloud.threefold.io
+on: 
+  push:
+    branch: [ main ]
+
+jobs:
+  job_one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: pushing latest change on cloud.threefold.io
+      uses: appleboy/ssh-action@master
+      with:
+        host: cloud.threefold.io
+        username: ${{ secrets.TF_USER }}
+        key: ${{ secrets.TF_SECRET }}
+        port: ${{ secrets.TF_PORT }}
+        script: |
+          cd ~/websites/www_tfcloud_zola/
+          git log -1
+          git pull

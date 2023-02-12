@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://tfcloud.tf/"
+base_url = "https://cloud.threefold.io/"
 # Change this to your own URL! Please note this variable **must** be uncommented.
 
 title = "tfcloud"

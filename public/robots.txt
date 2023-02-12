@@ -1,4 +1,3 @@
 User-agent: *
-Disallow:
 Allow: /
-Sitemap: https://tfcloud.tf/sitemap.xml
+Sitemap: https://cloud.threefold.io/sitemap.xml
