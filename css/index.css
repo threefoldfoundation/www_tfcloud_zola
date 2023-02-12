@@ -149,9 +149,11 @@ button:hover  {
 background-color: #2c5282;
 color: #fff;
 }
-
+.footer_links:hover{
+color: #333 !important;
+}
 a:hover  {
-  color: #fff !important;
+  color: #fff;
   }
 
 button  {

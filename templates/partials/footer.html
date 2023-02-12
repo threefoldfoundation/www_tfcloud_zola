@@ -15,7 +15,10 @@
         {% set footer_class = config.extra.footer_class | default(value='') %}
         <div class="{{ footer_class }}">
             {# <img src="{{get_url(path='images/')}}" class="w-60" alt=""> #}
-            <p class="text-center">&#169; TFCloud&trade; All Rights Reserved 2023</p>
+            <p class="text-center">&#169; TFCloud&trade; All Rights Reserved 2023.
+                <a class="footer_links text-black" href="https://library.threefold.me/info/legal/#/legal__terms_conditions_websites" target="_blank">Terms & Conditions |
+            </a><a class="footer_links text-black" href="https://library.threefold.me/info/legal/#/legal__privacypolicy" target="_blank">Privacy Policy 
+            </a></p>
         </div>
     {% endif %}
 </footer>
