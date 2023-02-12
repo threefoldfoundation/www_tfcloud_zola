@@ -37,7 +37,7 @@ Scale your workloads limitlessly in a secure end-to-end environment. The world's
 ### Get started with your eVDC BETA version and join our testing community!
 
 <button onclick="window.open('https://library.threefold.me/info/threefold#/cloud/threefold__cloud_home?id=learn-what-is-threefold-p2p-cloud', '_blank')">Get Started</button>
-<button onclick="window.open('https://t.me/joinchat/BwOvOxxgK59GmRoZ2_sM0w', '_blank')">Join Community</button>
+<button class="btn_green" onclick="window.open('https://t.me/joinchat/BwOvOxxgK59GmRoZ2_sM0w', '_blank')">Join Community</button>
 
 {% end %}
 
@@ -70,7 +70,7 @@ The remaining carbon footprint of the grid will be converted into carbon credits
 Run your Kubernetes workloads anywhere in the world with dedicated CPU, SSD drives, and RAM – just for your web application or development environment. Compatible with industry standards and major frameworks. On the edge, out of the control of centralized parties – the next generation of the Data Center industry.
 
 <button onclick="window.open('https://library.threefold.me/info/threefold#/cloud/threefold__evdc', '_blank')">Learn More</button>
-<button>[Pricing](#pricing)</button>
+<button class="btn_green">[Pricing](#pricing)</button>
 
 {% end %}
 
