@@ -121,11 +121,11 @@ A public peer-to-peer overlay network to connect everything on the planet. Conne
 
 |||
 
-## The ThreeFold Marketplace
+## ThreeFold PlayGround
 
-A marketplace of ready-made peer-to-peer applications for community builders seeking alternatives to centralized services. Deploy your own suite of online community tools in full privacy and with a high level of security. Runs on top of our VDC.
+Playground is a user-friendly web-based interface that serves as a sandbox environment for developers, allowing them to experiment, test, and deploy their applications on the ThreeFold Grid.
 
-<button onclick="window.open('https://marketplace.threefold.io/', '_blank')">Discover the Marketplace</button>
+<button onclick="window.open('https://playground.grid.tf', '_blank')">Discover PlayGround</button>
 
 
 {% end %}
